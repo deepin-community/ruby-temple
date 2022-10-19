@@ -1,0 +1,31 @@
+Source: ruby-temple
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Eugene Lavnikevich <e.lavnikevich@sam-solutions.net>,
+           Jérémy Bobbio <lunar@debian.org>
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               rake,
+               ruby-bacon,
+               ruby-erubis,
+               ruby-tilt
+Standards-Version: 4.4.1
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-temple.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-temple
+Homepage: http://dojo.rubyforge.org/temple/
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-temple
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: template compilation framework in Ruby
+ Temple is an abstraction and a framework for compiling templates to pure Ruby.
+ It's all about making it easier to experiment, implement and optimize template
+ languages. It should be of interest of anyone who wants to implement a
+ template language or cares about the internals of a template engine.
